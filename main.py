@@ -1,16 +1,16 @@
-# This is a sample Python script.
+from string import ascii_uppercase
+from random import randint
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+alphabet = list(ascii_uppercase)
 
+def generate_random_combination():
+    combination = ""
+    for x in range(3):
+        letter_id = randint(0, 23)
+        combination += alphabet[letter_id]
+    return combination
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+#How to "teach" a sequence of logical instructions to think? I bet it have to change its code, a function that write itself.'
 
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    print(generate_random_combination())
